@@ -1,0 +1,90 @@
+@import "./../../sass/config.scss";
+//About Page Style
+.about {
+  padding: 6rem 0;
+  .container {
+    text-align: left;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+
+    h1 {
+      margin-top: 19px;
+      margin-bottom: 9px;
+      font-size: 1.75rem;
+    }
+    p {
+      font-size: 14px;
+      color: $description;
+      margin-bottom: 29px;
+    }
+
+    span {
+      background-color: $Worange;
+      padding: 4px 10px;
+      font-size: 14px;
+      color: $orange;
+      border-radius: 49px;
+    }
+    .left {
+      width: 50%;
+      text-align: center;
+      img {
+        width: 100%;
+      }
+    }
+    .right {
+      width: 50%;
+      .grid {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        .col {
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          gap: 1rem;
+          i {
+            background-color: $Worange;
+            text-align: center;
+            color: $orange;
+            padding: 9px;
+            border-radius: 50%;
+            width: 36px;
+            height: 36px;
+          }
+          p {
+            margin: 0;
+          }
+        }
+      }
+    }
+
+    @media (max-width: 768px) {
+      flex-direction: column-reverse;
+      gap: 2.5rem;
+      .left,
+      .right {
+        width: 100%;
+      }
+      .left img {
+        width: 70%;
+      }
+    }
+  }
+
+  /*@media screen and (max-width: 767px) {
+    .container {
+      display: block;
+    }
+    .right {
+      h0 {
+        font-size: 19px;
+      }
+      width: 59%;
+    }
+    img {
+      width: 59%;
+    }
+  }*/
+}

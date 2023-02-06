@@ -1,0 +1,56 @@
+@import "./../../sass/config.scss";
+//services Style
+.services {
+  background-color: $hero;
+  padding: 6rem 0;
+  text-align: center;
+  .container {
+    span {
+      margin-bottom: 10px;
+    }
+    h1 {
+      margin-bottom: 50px;
+    }
+    .flex {
+      @include flex(center);
+      gap: 1rem;
+      @media (max-width: 991px) {
+        flex-wrap: wrap;
+      }
+      .card {
+        padding: 2rem 10px;
+        background-color: #fff;
+        width: 350px;
+        max-width: 100%;
+        @media (max-width: 991px) {
+          width: 40%;
+        }
+        @media (max-width: 768px) {
+          width: 100%;
+        }
+        .card-title {
+          margin-top: 10px;
+          margin-bottom: 20px;
+          font-size: 25px;
+          text-transform: capitalize;
+        }
+        .card-description {
+          font-size: 15px;
+          color: $description;
+          margin-bottom: 20px;
+        }
+        .card-link {
+          border: 1px solid $description;
+          display: inline-block;
+          padding: 0.5rem 1rem;
+          color: $description;
+          transition-duration: 0.25s;
+          &:hover {
+            color: $orange;
+            border-color: $orange;
+          }
+        }
+      }
+    }
+  }
+}

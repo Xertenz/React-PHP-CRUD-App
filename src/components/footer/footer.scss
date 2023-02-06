@@ -1,0 +1,63 @@
+@import "./../../sass/config.scss";
+footer {
+  padding-top: 5rem;
+  background-color: #181c2b;
+
+  ul {
+    li {
+      a {
+        color: #fff;
+      }
+    }
+  }
+  .container {
+    text-align: left;
+    @include grid(4);
+    padding-bottom: 5rem;
+
+    @media (max-width: 991px) {
+      grid-template-columns: repeat(2, 1fr);
+      row-gap: 2rem;
+      column-gap: 3rem;
+    }
+    @media (max-width: 767px) {
+      grid-template-columns: 1fr;
+      row-gap: 3rem;
+    }
+
+    p {
+      color: #fff;
+    }
+    img {
+      margin-bottom: 10px;
+    }
+    h4 {
+      margin-bottom: 10px;
+      font-size: 20px;
+      font-weight: 600;
+      color: #fff;
+    }
+    .items {
+      margin-top: 30px;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      .item {
+        display: flex;
+        align-items: center;
+        color: #fff;
+        i {
+          margin-right: 20px;
+        }
+      }
+    }
+  }
+
+  .copyright {
+    background-color: #282b39;
+    height: 10vh;
+    text-align: center;
+    padding-top: 20px;
+    color: #fff;
+  }
+}

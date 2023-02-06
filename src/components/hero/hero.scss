@@ -1,0 +1,49 @@
+@import "./../../sass/config.scss";
+//Hero Style
+.hero {
+  // height: 90vh;
+  background-color: $hero;
+  padding: 6rem 0;
+  .container {
+    @include flex(space-between);
+    text-align: left;
+
+    .left {
+      width: 47%;
+      h1 {
+        font-size: 1.75rem;
+        color: #000;
+        margin-top: 20px;
+        margin-bottom: 10px;
+      }
+      i {
+        margin-right: 10px;
+        color: $orange;
+      }
+      p {
+        color: $description;
+      }
+      button {
+        margin-top: 20px;
+        font-size: 18px;
+        @include button($orange, #fff, 15px 30px);
+      }
+    }
+    .right {
+      text-align: center;
+      img {
+        width: 70%;
+      }
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .container {
+      flex-wrap: wrap;
+      gap: 2rem;
+      .left {
+        width: 100%;
+      }
+    }
+  }
+}

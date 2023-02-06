@@ -1,0 +1,86 @@
+@import "./../../sass/config.scss";
+//Header Style
+header {
+  // background-color: red;
+  img {
+    cursor: pointer;
+  }
+  .container {
+    padding: 30px 20px;
+    @include flex(space-between);
+    @media (max-width: 575px) {
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+  }
+  ul {
+    @include flex(space-between);
+
+    li {
+      // margin-left: 10px;
+      a {
+        color: $Dblue;
+        transition: 0.2s ease;
+        display: block;
+        padding: 0 7px;
+
+        &:hover {
+          color: $orange;
+        }
+      }
+    }
+  }
+
+  .media {
+    @include flex(space-between);
+    display: flex;
+    gap: 10px;
+    i {
+      color: $Dblue;
+      transition: 0.2s ease;
+      padding: 10px;
+      width: 36px;
+      height: 36px;
+      &:hover {
+        color: $orange;
+      }
+      box-shadow: 0 3px 10px hsla(0, 0%, 0%, 0.3);
+      cursor: pointer;
+    }
+  }
+  .nav-mobile {
+    display: none;
+  }
+  .mobile {
+    display: none;
+  }
+  @media screen and (max-width: 991px) {
+    .mobile {
+      display: block;
+    }
+    .nav-mobile {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: stretch;
+      position: fixed;
+      top: 0;
+      left: 0;
+      text-align: left;
+      height: 100vh;
+      width: 200px;
+      background-color: #fff;
+      border-right: 2px solid #aaa;
+      li {
+        margin: 0;
+        width: 100%;
+        a {
+          padding: 0.75rem 1rem;
+        }
+      }
+    }
+    .flex {
+      display: none;
+    }
+  }
+}
