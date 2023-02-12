@@ -1,0 +1,52 @@
+.list-users-wrapper {
+  padding-top: 1rem;
+}
+.list-users-wrapper .list-users-title {
+  text-align: center;
+  color: #444;
+  margin-bottom: 1rem;
+}
+.list-users-wrapper table {
+  border: 1px solid red;
+  width: 100%;
+}
+.list-users-wrapper table thead {
+  text-align: left;
+  background-color: var(--color-red-light);
+}
+.list-users-wrapper table thead tr th,
+.list-users-wrapper table tbody tr td {
+  padding: 0.5rem;
+}
+.list-users-wrapper table thead tr th {
+  color: #333;
+}
+
+.list-users-wrapper table tbody tr:nth-child(odd) {
+  background-color: #eee;
+}
+.list-users-wrapper table tbody tr:nth-child(even) {
+  background-color: #fafafa;
+}
+.list-users-wrapper table tbody .btn {
+  font-size: 1rem;
+  border: 2px solid var(--color-red-light);
+  border-radius: 5px;
+  padding: 0.25rem 0.75rem;
+  cursor: pointer;
+  transition: 0.2s ease;
+  color: #fff;
+  font-weight: bold;
+}
+
+.list-users-wrapper table tbody .btn:hover {
+  border-color: var(--color-red-dark);
+}
+.list-users-wrapper table tbody .btn.btn-edit-user {
+  margin-right: 0.7rem;
+  background: #2db600;
+}
+
+.list-users-wrapper table tbody .btn.btn-delete-user {
+  background: rgba(255, 0, 0, 0.801);
+}
